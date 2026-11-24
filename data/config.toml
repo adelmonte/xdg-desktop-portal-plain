@@ -1,0 +1,33 @@
+# xdg-desktop-portal-plain: copy to ~/.config/xdg-desktop-portal-plain/config.toml
+# Reread whenever it's saved; `xdg-desktop-portal-plain --check` shows what it gives.
+
+# Where questions (permissions, which app to open a file with) are asked.
+# The prompt command is added to the end.
+terminal = ["kitty", "--class", "xdg-desktop-portal-plain",
+            "-o", "remember_window_size=no",
+            "-o", "initial_window_width=72c", "-o", "initial_window_height=20c"]
+
+[appearance]
+color-scheme = "prefer-dark"     # prefer-dark, prefer-light or default
+# accent-color = "#88c0d0"
+contrast = "normal"              # normal or high
+reduced-motion = "no-preference" # no-preference or reduce
+
+[lockdown]
+# disable-location = true
+
+# Anything else, under its namespace: strings, true/false, numbers (i32, or i64 if
+# too big for one, or 1.0 for a double), lists of strings, or { u = 2 } and the like
+# (u, i, x, t, y, d, s, b) for a given type. Sandboxed GTK apps read these for their
+# theme, icons, cursor and fonts.
+# [settings."org.gnome.desktop.interface"]
+# gtk-theme = "Adwaita-dark"
+# icon-theme = "Adwaita"
+# cursor-theme = "Adwaita"
+# cursor-size = 24
+# font-name = "Sans 10"
+# monospace-font-name = "Monospace 10"
+# scaling-factor = { u = 1 }
+
+# [settings."org.gnome.desktop.wm.preferences"]
+# button-layout = ":"
