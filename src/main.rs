@@ -8,6 +8,7 @@ mod inhibit;
 mod notification;
 mod portals;
 mod prompt;
+mod screencast;
 
 use std::collections::HashMap;
 use std::os::unix::ffi::OsStrExt;
@@ -188,7 +189,9 @@ async fn main() -> zbus::Result<()> {
         .serve_at(PATH, portals::AppChooser { prompter: prompter.clone() })?
         .serve_at(PATH, portals::Access { prompter: prompter.clone() })?
         .serve_at(PATH, portals::Account { prompter: prompter.clone() })?
-        .serve_at(PATH, portals::DynamicLauncher { prompter })?
+        .serve_at(PATH, portals::DynamicLauncher { prompter: prompter.clone() })?
+        .serve_at(PATH, screencast::ScreenCast::new(prompter))?
+        .serve_at(PATH, screencast::Screenshot::new(&runtime))?
         .serve_at(PATH, portals::Email)?
         .serve_at(PATH, inhibit::Inhibit::default())?
         .serve_at(PATH, notifications)?

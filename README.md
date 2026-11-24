@@ -2,8 +2,8 @@
 
 A toolkit-free [xdg-desktop-portal](https://flatpak.github.io/xdg-desktop-portal/) backend
 for niri, in pure Rust: everything xdg-desktop-portal-gtk does on a niri desktop except
-file dialogs (pair it with one such as [xdg-desktop-portal-tui](https://github.com/adelmonte/xdg-desktop-portal-tui)), printing and
-screenshots, without GTK.
+file dialogs (pair it with one such as [xdg-desktop-portal-tui](https://github.com/adelmonte/xdg-desktop-portal-tui)) and printing,
+without GTK, plus screen sharing.
 
 - **Settings**: dark mode, accent color, contrast and reduced motion, plus any other
   setting (GTK theme, icons, cursor, fonts for sandboxed apps), from a config file that's
@@ -16,6 +16,11 @@ screenshots, without GTK.
   through logind.
 - **Access**, **Account**, **DynamicLauncher**: their questions are asked in a terminal
   window (kitty).
+- **ScreenCast**: share a screen or a window (including niri's dynamic cast target),
+  picked in a terminal; niri makes the PipeWire stream through its
+  `org.gnome.Mutter.ScreenCast` service. Apps that ask can be remembered, so they
+  don't ask again.
+- **Screenshot** and **PickColor**: through niri's `org.gnome.Shell.Screenshot`.
 - **Email**: a `mailto:` link opened with `xdg-open`.
 - **Lockdown**: from the config file.
 

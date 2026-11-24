@@ -1,8 +1,8 @@
 [package]
 name = "xdg-desktop-portal-plain"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
-description = "A toolkit-free xdg-desktop-portal backend: settings, app chooser, notifications, inhibit, access prompts in a terminal"
+description = "A toolkit-free xdg-desktop-portal backend for niri: settings, app chooser, notifications, inhibit, screen cast, terminal prompts"
 license = "GPL-3.0-or-later"
 
 [dependencies]
