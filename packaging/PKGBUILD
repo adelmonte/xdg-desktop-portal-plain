@@ -1,8 +1,8 @@
 # Maintainer: adelmonte
 pkgname=xdg-desktop-portal-plain
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
-pkgdesc='Toolkit-free xdg-desktop-portal backend: settings, app chooser, notifications, inhibit, terminal prompts'
+pkgdesc='Toolkit-free xdg-desktop-portal backend for niri: settings, app chooser, notifications, inhibit, screen cast'
 arch=('x86_64')
 url='https://github.com/adelmonte/xdg-desktop-portal-plain'
 license=('GPL-3.0-or-later')
@@ -12,7 +12,7 @@ optdepends=('kitty: permission and app-chooser prompts (or set terminal in the c
 makedepends=('cargo')
 provides=('xdg-desktop-portal-impl')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('d0950631ffd32c2288b6ee10df6b0644951009262aae859a7710b08e5e244054')
+sha256sums=('dac867b4c0c03e61a5c1d11bd058bd5a3141553ed535f42588d155966e94b0cd')
 options=('!lto')
 
 prepare() {
