@@ -12,7 +12,7 @@ optdepends=('kitty: permission and app-chooser prompts (or set terminal in the c
 makedepends=('cargo')
 provides=('xdg-desktop-portal-impl')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('d0950631ffd32c2288b6ee10df6b0644951009262aae859a7710b08e5e244054')
 options=('!lto')
 
 prepare() {
